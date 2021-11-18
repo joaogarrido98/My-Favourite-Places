@@ -40,6 +40,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="Vzv-Pk-tVj" id="iZm-1W-0bo"/>
+                        <outlet property="tableView" destination="Vzv-Pk-tVj" id="ona-kn-7La"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZK-io-Jnz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

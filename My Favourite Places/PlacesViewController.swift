@@ -7,7 +7,18 @@
 
 import UIKit
 
+var places = [[String : String]()]
+
 class PlacesViewController: UITableViewController {
+   
+    override func viewDidAppear(_ animated: Bool) {
+        if(places.count == 1 && places[0].count == 0){
+            places.remove(at: 0)
+            places.append(["name":"Ashton Building", "lat":"53.406566","lon": "-2.966531"])
+            
+        }
+        table.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +34,21 @@ class PlacesViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return places.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
 
-        cell.textLabel?.text = "Row" + String(indexPath.row)
-
+        if(places[indexPath.row]["name"] != nil){
+            cell.textLabel?.text = places[indexPath.row]["name"]
+        }
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toMap", sender: nil)
     }
-
+    
+    @IBOutlet var table: UITableView!
 }
