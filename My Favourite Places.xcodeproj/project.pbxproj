@@ -11,7 +11,6 @@
 		959E46202746C7290080EBBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E461F2746C7290080EBBF /* SceneDelegate.swift */; };
 		959E46222746C7290080EBBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E46212746C7290080EBBF /* ViewController.swift */; };
 		959E46252746C7290080EBBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959E46232746C7290080EBBF /* Main.storyboard */; };
-		959E46282746C7290080EBBF /* My_Favourite_Places.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 959E46262746C7290080EBBF /* My_Favourite_Places.xcdatamodeld */; };
 		959E462A2746C72A0080EBBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959E46292746C72A0080EBBF /* Assets.xcassets */; };
 		959E462D2746C72A0080EBBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959E462B2746C72A0080EBBF /* LaunchScreen.storyboard */; };
 		959E46352746CA4B0080EBBF /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E46342746CA4B0080EBBF /* PlacesViewController.swift */; };
@@ -23,7 +22,6 @@
 		959E461F2746C7290080EBBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		959E46212746C7290080EBBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		959E46242746C7290080EBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		959E46272746C7290080EBBF /* My_Favourite_Places.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Favourite_Places.xcdatamodel; sourceTree = "<group>"; };
 		959E46292746C72A0080EBBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		959E462C2746C72A0080EBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		959E462E2746C72A0080EBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,12 +61,11 @@
 				959E461D2746C7290080EBBF /* AppDelegate.swift */,
 				959E461F2746C7290080EBBF /* SceneDelegate.swift */,
 				959E46212746C7290080EBBF /* ViewController.swift */,
-				959E46232746C7290080EBBF /* Main.storyboard */,
 				959E46342746CA4B0080EBBF /* PlacesViewController.swift */,
-				959E46292746C72A0080EBBF /* Assets.xcassets */,
 				959E462B2746C72A0080EBBF /* LaunchScreen.storyboard */,
+				959E46232746C7290080EBBF /* Main.storyboard */,
 				959E462E2746C72A0080EBBF /* Info.plist */,
-				959E46262746C7290080EBBF /* My_Favourite_Places.xcdatamodeld */,
+				959E46292746C72A0080EBBF /* Assets.xcassets */,
 			);
 			path = "My Favourite Places";
 			sourceTree = "<group>";
@@ -147,7 +144,6 @@
 				959E46222746C7290080EBBF /* ViewController.swift in Sources */,
 				959E461E2746C7290080EBBF /* AppDelegate.swift in Sources */,
 				959E46352746CA4B0080EBBF /* PlacesViewController.swift in Sources */,
-				959E46282746C7290080EBBF /* My_Favourite_Places.xcdatamodeld in Sources */,
 				959E46202746C7290080EBBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,19 +362,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		959E46262746C7290080EBBF /* My_Favourite_Places.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				959E46272746C7290080EBBF /* My_Favourite_Places.xcdatamodel */,
-			);
-			currentVersion = 959E46272746C7290080EBBF /* My_Favourite_Places.xcdatamodel */;
-			path = My_Favourite_Places.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 959E46122746C7290080EBBF /* Project object */;
 }

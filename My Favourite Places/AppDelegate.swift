@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  My Favourite Places
 //
-//  Created by Ilkin Samedzade on 18/11/2021.
+//  Created by Joao Garrido on 18/11/2021.
 //
 
 import UIKit
