@@ -72,14 +72,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-le-rUt">
+                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfd-le-rUt" secondAttribute="trailing" constant="20" id="Coz-VN-vER"/>
+                            <constraint firstItem="sfd-le-rUt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="K07-cG-pLV"/>
+                            <constraint firstItem="sfd-le-rUt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e6D-2z-OvW"/>
+                            <constraint firstItem="sfd-le-rUt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rMd-Pt-JPV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="8wL-If-Oon"/>
+                    <connections>
+                        <outlet property="map" destination="sfd-le-rUt" id="ekq-qz-Qbw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="83"/>
+            <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
         </scene>
     </scenes>
     <resources>
