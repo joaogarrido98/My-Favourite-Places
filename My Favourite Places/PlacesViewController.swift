@@ -15,7 +15,6 @@ class PlacesViewController: UITableViewController {
         if(places.count == 1 && places[0].count == 0){
             places.remove(at: 0)
             places.append(["name":"Ashton Building", "lat":"53.406566","lon": "-2.966531"])
-            
         }
         table.reloadData()
     }
