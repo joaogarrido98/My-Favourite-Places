@@ -7,27 +7,22 @@
 
 import UIKit
 
-var places = [[String : String]()]
-var currentPlace = -1
-
 class PlacesViewController: UITableViewController {
+    let defaults = Defaults()
+    var locationsArray : [Locations] = []
+    var locationIndex = -1
    
     override func viewDidAppear(_ animated: Bool) {
-        if(places.count == 1 && places[0].count == 0){
-            places.remove(at: 0)
-            places.append(["name":"Ashton Building", "lat":"53.406566","lon": "-2.966531"])
+        locationsArray = defaults.getLocations()
+        if(locationsArray.count == 0){
+            defaults.addLocation(location: Locations(name:"Ashton Building", lat: 53.406566 ,lon: -2.966531))
+            locationsArray = defaults.getLocations()
         }
-        currentPlace = -1
         table.reloadData()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,20 +30,33 @@ class PlacesViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return places.count
+        return locationsArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        if(places[indexPath.row]["name"] != nil){
-            cell.textLabel?.text = places[indexPath.row]["name"]
+        if(locationsArray[indexPath.row].name != nil){
+            cell.textLabel?.text = locationsArray[indexPath.row].name
         }
         return cell
     }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        currentPlace = indexPath.row
-        performSegue(withIdentifier: "toMap", sender: nil)
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            locationsArray.remove(at: indexPath.row)
+            defaults.deleteLocation(index: indexPath.row)
+            table.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "fromCellToMap"){
+            let destination = segue.destination as! ViewController
+            destination.location = locationsArray[table.indexPathForSelectedRow!.row]
+        }
+        if(segue.identifier == "toMap"){
+            print("hello hun")
+        }
     }
     
     @IBOutlet var table: UITableView!

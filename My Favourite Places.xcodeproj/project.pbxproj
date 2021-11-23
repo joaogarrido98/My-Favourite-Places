@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9508C96D274C08D30026901D /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508C96C274C08D30026901D /* Defaults.swift */; };
+		9508C973274C10450026901D /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508C972274C10450026901D /* Locations.swift */; };
 		959E461E2746C7290080EBBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E461D2746C7290080EBBF /* AppDelegate.swift */; };
 		959E46202746C7290080EBBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E461F2746C7290080EBBF /* SceneDelegate.swift */; };
 		959E46222746C7290080EBBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E46212746C7290080EBBF /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9508C96C274C08D30026901D /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		9508C972274C10450026901D /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		959E461A2746C7290080EBBF /* My Favourite Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Favourite Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959E461D2746C7290080EBBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959E461F2746C7290080EBBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				959E461D2746C7290080EBBF /* AppDelegate.swift */,
+				9508C96C274C08D30026901D /* Defaults.swift */,
+				959E46342746CA4B0080EBBF /* PlacesViewController.swift */,
+				9508C972274C10450026901D /* Locations.swift */,
 				959E461F2746C7290080EBBF /* SceneDelegate.swift */,
 				959E46212746C7290080EBBF /* ViewController.swift */,
-				959E46342746CA4B0080EBBF /* PlacesViewController.swift */,
 				959E462B2746C72A0080EBBF /* LaunchScreen.storyboard */,
 				959E46232746C7290080EBBF /* Main.storyboard */,
 				959E462E2746C72A0080EBBF /* Info.plist */,
@@ -141,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9508C973274C10450026901D /* Locations.swift in Sources */,
 				959E46222746C7290080EBBF /* ViewController.swift in Sources */,
 				959E461E2746C7290080EBBF /* AppDelegate.swift in Sources */,
+				9508C96D274C08D30026901D /* Defaults.swift in Sources */,
 				959E46352746CA4B0080EBBF /* PlacesViewController.swift in Sources */,
 				959E46202746C7290080EBBF /* SceneDelegate.swift in Sources */,
 			);

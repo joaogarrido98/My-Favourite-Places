@@ -24,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="fromCellToMap" id="TRK-Rl-pFM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -84,10 +87,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfd-le-rUt" secondAttribute="trailing" constant="20" id="Coz-VN-vER"/>
-                            <constraint firstItem="sfd-le-rUt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="K07-cG-pLV"/>
-                            <constraint firstItem="sfd-le-rUt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e6D-2z-OvW"/>
-                            <constraint firstItem="sfd-le-rUt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rMd-Pt-JPV"/>
+                            <constraint firstItem="sfd-le-rUt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7G4-M5-CJ0"/>
+                            <constraint firstItem="sfd-le-rUt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CCL-b3-3C0"/>
+                            <constraint firstItem="sfd-le-rUt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OYE-T7-gcV"/>
+                            <constraint firstItem="sfd-le-rUt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="avL-A8-DEy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="8wL-If-Oon"/>
@@ -105,6 +108,9 @@
             <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TRK-Rl-pFM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

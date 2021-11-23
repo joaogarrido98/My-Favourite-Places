@@ -9,18 +9,16 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate {
-
+    let defaults = Defaults()
+    var location : Locations = Locations()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard currentPlace != -1 else {return}
-        guard places.count > currentPlace else {return}
-        guard let name = places[currentPlace]["name"] else {return}
-        guard let lat = places[currentPlace]["lat"] else {return}
-        guard let lon = places[currentPlace]["lon"] else {return}
-        guard let latitude = Double(lat) else {return}
-        guard let longitude = Double(lon) else {return}
+        guard let name = location.name else {return}
+        guard let lat = location.lat else {return}
+        guard let lon = location.lon else {return}
         let span = MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008)
-        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         let region =   MKCoordinateRegion(center: coordinate, span: span)
         self.map.setRegion(region, animated: true)
         
@@ -40,7 +38,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             var title = ""
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
                 if(error != nil){
-                    print(error)
+                    print(error as Any)
                 }else{
                     if let placemark = placemarks?[0] {
                         if(placemark.subThoroughfare != nil){
@@ -58,10 +56,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 annotation.coordinate = newCoordinate
                 annotation.title = title
                 self.map.addAnnotation(annotation)
-                places.append(["name": title, "lat": String(newCoordinate.latitude), "lon": String(newCoordinate.longitude)])
+                self.defaults.addLocation(location: Locations(name: title, lat: newCoordinate.latitude, lon: newCoordinate.longitude))
             })
         }
     }
+    
     @IBOutlet weak var map: MKMapView!
 }
 
